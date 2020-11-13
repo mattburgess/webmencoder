@@ -1,0 +1,7 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+Creator: Matt Burgess
+PackageName: webmencoder
+PackageOriginator: Person: Matt Burgess
+PackageHomePage: https://github.com/mattburgess/webmencoder
+PackageLicenseDeclared: (MIT OR Apache-2.0)
