@@ -39,7 +39,8 @@ resource "github_branch_protection" "main" {
   require_signed_commits = true
 
   required_status_checks {
-    strict = true
+    strict   = true
+    contexts = ["Lint"]
   }
 
   required_pull_request_reviews {
