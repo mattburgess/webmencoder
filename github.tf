@@ -35,7 +35,7 @@ resource "github_repository" "webmencoder" {
 resource "github_branch_protection" "main" {
   repository_id          = github_repository.webmencoder.node_id
   pattern                = "main"
-  enforce_admins         = true
+  enforce_admins         = false
   require_signed_commits = true
 
   required_status_checks {
