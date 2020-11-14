@@ -1,0 +1,21 @@
+---
+name: clippy
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: clippy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+      - name: Add clippy component
+        run: rustup component add clippy
+      - name: Run clippy
+        uses: actions-rs/clippy-check@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: --all-features
