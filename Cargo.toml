@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: (MIT OR Apache-2.0)
 [package]
 name = "webmencoder"
-version = "{$nextRelease.version}"
+version = "{.version}"
 authors = ["Matt Burgess <549318+mattburgess@users.noreply.github.com>"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
