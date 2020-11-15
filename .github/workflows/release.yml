@@ -19,6 +19,8 @@ jobs:
     - name: Add conventional-commits plugin
       run: npm install conventional-changelog-conventionalcommits
       working-directory: .github/workflows
+    - name: Release to GitHub
+      working-directory: .github/workflows
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GIT_AUTHOR_NAME: webmencoder-bot
