@@ -1,3 +1,10 @@
+### [1.0.1](https://github.com/mattburgess/webmencoder/compare/v1.0.0...v1.0.1) (2020-11-15)
+
+
+### Bug Fixes
+
+* **build:** Publish GitHub release ([739e280](https://github.com/mattburgess/webmencoder/commit/739e280fa5a573ea9e0f4bd02cc736c462a7e13c))
+
 ## 1.0.0 (2020-11-15)
 
 
