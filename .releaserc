@@ -11,3 +11,4 @@ plugins:
   - prepareCmd: "sed -i -e \"s/version = .*/version = \\\"${nextRelease.version}\\\"/\" Cargo.toml"
 - - "@semantic-release/git"
   - assets: ["CHANGELOG.md", "Cargo.toml"]
+- - "@semantic-release/github"
