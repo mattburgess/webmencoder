@@ -1,5 +1,12 @@
 # ChangeLog
 
+### [0.0.2](https://github.com/mattburgess/webmencoder/compare/v0.0.1...v0.0.2) (2020-12-20)
+
+
+### Bug Fixes
+
+* **build:** Ignore ChangeLog linting errors ([09cdfda](https://github.com/mattburgess/webmencoder/commit/09cdfdadd00b304c71fda945a894ac8dd235fb35))
+
 ### [0.0.1](https://github.com/mattburgess/webmencoder/compare/v0.0.0...v0.0.1) (2020-11-16)
 
 
