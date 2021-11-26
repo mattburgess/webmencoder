@@ -34,6 +34,7 @@ enum Stream {
         id: String,
     },
     Subtitle,
+    Data,
 }
 
 #[derive(Debug, Deserialize)]
@@ -104,6 +105,8 @@ fn build_command(
             }
 
             Stream::Subtitle => {}
+
+            Stream::Data => {}
         }
     }
 
