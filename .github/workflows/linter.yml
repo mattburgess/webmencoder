@@ -16,9 +16,10 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
       - name: Lint Code Base
-        uses: github/super-linter@v3
+        uses: github/super-linter@v4
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # conventional-changelog's generated CHANGELOGs don't pass linting checks - https://github.com/conventional-changelog/conventional-changelog/issues/615
           FILTER_REGEX_EXCLUDE: ./CHANGELOG.md
+          VALIDATE_TERRAFORM_TERRASCAN: false

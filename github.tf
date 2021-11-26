@@ -19,6 +19,7 @@ variable "github_token" {
 }
 
 resource "github_repository" "webmencoder" {
+  #ts:skip=AC_GITHUB_0002 repo is intentionally public
   name                   = "webmencoder"
   description            = "An opinionated CLI for converting MPEG to WebM"
   has_issues             = true
