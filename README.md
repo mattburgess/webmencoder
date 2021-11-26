@@ -6,10 +6,10 @@
 
 ## Reason For Existence
 
-FFmpeg is an incredibly useful tool for converting source media into other formats that are more space-efficient. As well as there being a large number of choices to make regarding the output media format, target quality/bit-rates, etc. target-device compatibility can further constrain what choices can be made. The end result of this is that the FFmpeg command line can become quite a complex
-beast, and having to construct that on a source by source basis can be both frustrating and error prone.
+FFmpeg is an incredibly useful tool for converting source media into other formats that are more space-efficient. As well as there being a large number of choices to make regarding the output media format, target quality/bit-rates, etc. target-device compatibility can further constrain what choices can be made. The end result of this is that the FFmpeg command-line can become quite a complex
+beast, and having to construct that on a source by source basis can be both frustrating and error-prone.
 
-This tool automates the process of invoking FFmpeg with the correct command line options based on the input media and the opinions described below.
+This tool automates the process of invoking FFmpeg with the correct command-line options based on the input media and the opinions described below.
 
 ## Webmencoder's Opinions
 
@@ -61,7 +61,7 @@ what hardware device to use to perform the encoding in case the default isn't su
 ## TODO
 
 * Error handling
-* Allow audio stream id -> language mappings to be passed in at runtime instead of being hardcoded; these are unlikely to be consistent across input files
+* Allow audio stream ID -> language mappings to be passed in at runtime instead of being hardcoded; these are unlikely to be consistent across input files
 
 ## License
 
