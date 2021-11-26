@@ -46,8 +46,8 @@ fn default_channel_layout() -> String {
     "stereo".to_string()
 }
 
-fn get_lang_from_id(id: &String) -> &str {
-    match id.as_str() {
+fn get_lang_from_id(id: &str) -> &str {
+    match id {
         "0x80" => "eng",
         "0x81" => "fra",
         "0x82" => "spa",
@@ -59,8 +59,8 @@ fn build_command(
     metadata: &Metadata,
     hw_device: &str,
     quality: u8,
-    input_vid: &std::path::PathBuf,
-    output_dir: &std::path::PathBuf,
+    input_vid: &std::path::Path,
+    output_dir: &std::path::Path,
 ) -> Result<(), std::io::Error> {
     let mut a_filters = Vec::new();
     let mut mappings = Vec::new();
@@ -150,7 +150,7 @@ fn build_command(
     Ok(())
 }
 
-fn get_video_details(input_vid: &std::path::PathBuf) -> Result<Metadata, std::io::Error> {
+fn get_video_details(input_vid: &std::path::Path) -> Result<Metadata, std::io::Error> {
     let ffprobe = Command::new("ffprobe")
         .args(&[
             "-v",
@@ -167,8 +167,8 @@ fn get_video_details(input_vid: &std::path::PathBuf) -> Result<Metadata, std::io
 }
 
 fn convert_file(
-    input_vid: &std::path::PathBuf,
-    output_dir: &std::path::PathBuf,
+    input_vid: &std::path::Path,
+    output_dir: &std::path::Path,
     hw_device: &str,
     quality: u8,
 ) -> Result<(), std::io::Error> {
@@ -177,8 +177,8 @@ fn convert_file(
 }
 
 fn convert_files(
-    input_dir: &std::path::PathBuf,
-    output_dir: &std::path::PathBuf,
+    input_dir: &std::path::Path,
+    output_dir: &std::path::Path,
     hw_device: &str,
     quality: u8,
 ) -> Result<(), std::io::Error> {
