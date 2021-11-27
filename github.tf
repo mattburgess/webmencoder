@@ -1,10 +1,10 @@
 terraform {
-  required_version = "0.13.5"
+  required_version = "1.0.11"
 
   required_providers {
     github = {
-      source  = "hashicorp/github"
-      version = "~> 4.0.0"
+      source  = "integrations/github"
+      version = "~> 4.18.0"
     }
   }
 }
@@ -29,8 +29,12 @@ resource "github_repository" "webmencoder" {
   allow_merge_commit     = false
   allow_rebase_merge     = false
   delete_branch_on_merge = true
-  default_branch         = "main"
   vulnerability_alerts   = "true"
+}
+
+resource "github_branch_default" "main" {
+  repository = github_repository.webmencoder.name
+  branch     = "main"
 }
 
 resource "github_branch_protection" "main" {
