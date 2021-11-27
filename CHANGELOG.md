@@ -1,5 +1,19 @@
 # ChangeLog
 
+## [0.1.0](https://github.com/mattburgess/webmencoder/compare/v0.0.0...v0.1.0) (2021-11-27)
+
+
+### Features
+
+* Add initial implementation and docs ([9e7d32b](https://github.com/mattburgess/webmencoder/commit/9e7d32b66c5de4422808870d012d94abc2e0636c))
+
+
+### Bug Fixes
+
+* **build:** Bump node version for release workflow ([#10](https://github.com/mattburgess/webmencoder/issues/10)) ([c083861](https://github.com/mattburgess/webmencoder/commit/c083861853c438910d377e0ce4cde9a8aa0e9862))
+* **build:** Only bump our version number ([#9](https://github.com/mattburgess/webmencoder/issues/9)) ([0049021](https://github.com/mattburgess/webmencoder/commit/00490218c116029a4007c0760f74e5b601e35827))
+* Handle DVDs with data streams ([96d5877](https://github.com/mattburgess/webmencoder/commit/96d5877934d252251e8eb0edb6a1abd732e34e9e))
+
 ### [0.0.2](https://github.com/mattburgess/webmencoder/compare/v0.0.1...v0.0.2) (2020-12-20)
 
 
