@@ -9,7 +9,7 @@ plugins:
 - - "@semantic-release/changelog"
   - changelogTitle: "# ChangeLog"
 - - "@semantic-release/exec"
-  - prepareCmd: "sed -i -e \"s/version = .*/version = \\\"${nextRelease.version}\\\"/\" Cargo.toml"
+  - prepareCmd: "sed -i -e \"s/^version = .*/version = \\\"${nextRelease.version}\\\"/\" Cargo.toml"
 - - "@semantic-release/git"
   - assets: ["CHANGELOG.md", "Cargo.toml", "Cargo.lock"]
 - - "@semantic-release/github"
