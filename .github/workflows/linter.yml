@@ -1,17 +1,16 @@
 ---
-name: Lint Code Base
+name: Lint Code Base (Superlinter)
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  build:
-    name: Lint
+  lint-superlinter:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
@@ -22,4 +21,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # conventional-changelog's generated CHANGELOGs don't pass linting checks - https://github.com/conventional-changelog/conventional-changelog/issues/615
           FILTER_REGEX_EXCLUDE: ./CHANGELOG.md
+          VALIDATE_RUST_CLIPPY: false
           VALIDATE_TERRAFORM_TERRASCAN: false

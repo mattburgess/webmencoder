@@ -1,12 +1,13 @@
 ---
-name: Lint Code Base (Clippy)
+name: Security Audit
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  lint-clippy:
+  audit:
+    name: audit
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -15,10 +16,8 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: "1.59.0"
-          components: clippy
           override: true
-      - name: Run clippy
-        uses: actions-rs/clippy-check@v1
+      - name: Audit dependencies
+        uses: actions-rs/audit-check@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          args: --all-features

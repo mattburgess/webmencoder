@@ -1,10 +1,10 @@
 terraform {
-  required_version = "1.0.11"
+  required_version = "1.1.7"
 
   required_providers {
     github = {
       source  = "integrations/github"
-      version = "~> 4.18.0"
+      version = "~> 4.20.0"
     }
   }
 }
@@ -45,7 +45,7 @@ resource "github_branch_protection" "main" {
 
   required_status_checks {
     strict   = true
-    contexts = ["Lint", "clippy"]
+    contexts = ["audit", "lint-clippy", "lint-superlinter"]
   }
 
   required_pull_request_reviews {
