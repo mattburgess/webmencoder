@@ -1,11 +1,12 @@
 ---
 name: Security Audit
+
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  build:
+  audit:
     name: audit
     runs-on: ubuntu-latest
     steps:

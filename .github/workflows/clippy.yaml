@@ -6,8 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
-    name: clippy
+  lint-clippy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

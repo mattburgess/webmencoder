@@ -44,8 +44,7 @@ resource "github_branch_protection" "main" {
   require_signed_commits = true
 
   required_status_checks {
-    strict   = true
-    contexts = ["audit", "clippy", "lint"]
+    strict = true
   }
 
   required_pull_request_reviews {

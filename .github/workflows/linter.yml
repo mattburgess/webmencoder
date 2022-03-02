@@ -6,8 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
-    name: lint
+  lint-superlinter:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
