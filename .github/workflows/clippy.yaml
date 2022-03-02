@@ -18,4 +18,5 @@ jobs:
         uses: actions-rs/clippy-check@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          toolchain: "1.59.0"
           args: --all-features
