@@ -1,5 +1,5 @@
 ---
-name: clippy
+name: Lint Code Base (Clippy)
 
 on:
   pull_request:
